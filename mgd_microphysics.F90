@@ -1,5 +1,7 @@
 module mgd_microphysics
 
+! code changes...
+
    implicit none
 
    public :: mgd_mp_version, &
@@ -38,9 +40,17 @@ contains
    !>  This is the main MGD microphysics scheme.
    !
    !-----------------------------------------------------------------------
-   subroutine mgd_mp()
+   subroutine mgd_mp(t, p, qv)
+
+       real, intent(inout) :: t     ! Temperature (K)
+       real, intent(inout) :: p     ! Pressure (Pa)
+       real, intent(inout) :: qv    ! Water vapor mixing ratio (kg/kg)
 
        write(0,*) 'Running the MGD microphysics version '//trim(mgd_mp_version)
+       write(0,*) 'Atmospheric state: '
+       write(0,*) ' T = ', t
+       write(0,*) ' P = ', p
+       write(0,*) ' qv = ', qv
 
    end subroutine mgd_mp
 
