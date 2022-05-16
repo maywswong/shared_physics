@@ -1,7 +1,5 @@
 module mgd_microphysics
 
-! code changes...
-
    implicit none
 
    public :: mgd_mp_version, &
@@ -10,7 +8,7 @@ module mgd_microphysics
 
    private
 
-   character(len=*), parameter :: mgd_mp_version = '1.0'
+   character(len=*), parameter :: mgd_mp_version = '2.0+development'
 
 
 contains
