@@ -8,7 +8,7 @@ module mgd_microphysics
 
    private
 
-   character(len=*), parameter :: mgd_mp_version = '2.0+development'
+   character(len=*), parameter :: mgd_mp_version = '2.1 alpha'
 
 
 contains
@@ -46,9 +46,11 @@ contains
 
        write(0,*) 'Running the MGD microphysics version '//trim(mgd_mp_version)
        write(0,*) 'Atmospheric state: '
-       write(0,*) ' T = ', t
-       write(0,*) ' P = ', p
-       write(0,*) ' qv = ', qv
+       write(0,*) ' P (Pa) = ', p
+       write(0,*) ' T (K) = ', t
+       write(0,*) ' qv (kg/kg) = ', qv
+
+       qv = qv + 0.001
 
    end subroutine mgd_mp
 
