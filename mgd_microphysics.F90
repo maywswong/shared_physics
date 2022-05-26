@@ -50,6 +50,8 @@ contains
        write(0,*) ' P = ', p
        write(0,*) ' qv = ', qv
 
+       write(0,*) ' MODIFICATION TEST! '
+
    end subroutine mgd_mp
 
 end module mgd_microphysics
